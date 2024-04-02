@@ -33,7 +33,6 @@ MainScreen::MainScreen(QWidget *parent) : QWidget(parent)
 
 
 
-
     // Create the Editor button and connect it to its signal.
     CustomButton* editorButton = new CustomButton("Editor", this);
     layout->addWidget(editorButton);

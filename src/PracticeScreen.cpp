@@ -33,10 +33,7 @@ PracticeScreen::PracticeScreen(QWidget *parent)
     comboBoxFont.setPointSize(18);
     languageComboBox->setFont(comboBoxFont);
 
-    // Fetches and adds available languages from the database.
-    languageComboBox->addItem("Any language");
-    QStringList languages = DatabaseManager::getInstance().getAvailableLanguages();
-    languageComboBox->addItems(languages);
+
     layout->addWidget(languageComboBox);
     layout->setAlignment(languageComboBox, Qt::AlignCenter);
 
@@ -95,4 +92,15 @@ PracticeScreen::PracticeScreen(QWidget *parent)
 }
 
 PracticeScreen::~PracticeScreen(){}
+
+
+
+// Refreshes the language selection ComboBox with available languages from the database.
+void PracticeScreen::refreshLanguages()
+{
+    languageComboBox->clear(); // Clears existing entries.
+    languageComboBox->addItem("Any language"); // Adds default option.
+    QStringList languages = DatabaseManager::getInstance().getAvailableLanguages();
+    languageComboBox->addItems(languages); // Refills the ComboBox.
+}
 

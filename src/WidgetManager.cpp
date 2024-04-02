@@ -23,6 +23,7 @@ WidgetManager::WidgetManager(QWidget *parent) : QWidget(parent)
     // Connection to switch to the Practice screen when its button is clicked.
     connect(mainScreen, &MainScreen::practiceButtonClicked, this, [this]()
     {
+        practiceScreen->refreshLanguages();
         stackedWidget->setCurrentWidget(practiceScreen);
     });
 

@@ -18,6 +18,8 @@ public:
     ~PracticeScreen();
 
 
+    void refreshLanguages();
+
 private:
     QComboBox *languageComboBox; // ComboBox to select the language for practice.
 

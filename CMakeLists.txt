@@ -9,31 +9,37 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+include_directories(include)
+
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Sql)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Sql)
 
 set(PROJECT_SOURCES
-        main.cpp
-        WidgetManager.cpp
-        WidgetManager.h
+    src/main.cpp
+    src/WidgetManager.cpp
+    src/MainScreen.cpp
+    src/PracticeScreen.cpp
+    src/Buttons.cpp
+    src/DatabaseManager.cpp
+    src/StandardReversedScreen.cpp
+    src/EditorScreen.cpp
+)
+
+set(PROJECT_HEADERS
+    include/WidgetManager.h
+    include/MainScreen.h
+    include/PracticeScreen.h
+    include/Buttons.h
+    include/DatabaseManager.h
+    include/StandardReversedScreen.h
+    include/EditorScreen.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Flashcards
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        MainScreen.h
-        MainScreen.cpp
-        PracticeScreen.h
-        PracticeScreen.cpp
-        Buttons.h
-        Buttons.cpp
-        DatabaseManager.h
-        DatabaseManager.cpp
-        StandardReversedScreen.h
-        StandardReversedScreen.cpp
-        EditorScreen.h
-        EditorScreen.cpp
+        ${PROJECT_HEADERS}
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Flashcards APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
