@@ -1,6 +1,6 @@
 # Flashcards
 
-An interactive C++ console application for learning with a spaced repetition system, based on SQLite, facilitating efficient vocabulary memorization. This project aims to provide users with a tool to enhance their language learning experience through the proven spaced repetition technique.
+An interactive C++ application with a graphical user interface (GUI) for learning, utilizing a spaced repetition system and powered by SQLite for efficient vocabulary memorization. This project is designed to offer users an effective tool for enhancing their language learning experience by leveraging the proven benefits of the spaced repetition technique.
 
 ## Project objective
 
