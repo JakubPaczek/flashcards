@@ -21,7 +21,31 @@ The primary goal of the Flashcards application is to help users expand and reinf
 
 ## Screenshots
 
+Here are a few screenshots demonstrating the main features of the Flashcards application. These images provide a glimpse into the user interface and the interactive learning experience offered by the app.
 
+### Main Menu
+
+The main menu offers quick access to all the application's features, including starting a new learning session, reviewing your progress, and managing your flashcards.
+
+![Main Menu](screenshots/Flashcards.png)
+
+### Language and Learning Mode Selection
+
+Before starting your practice session, you'll select your preferred language and learning mode. This customization allows you to tailor the learning experience to your individual needs and goals.
+
+![Language and Learning Mode Selection](screenshots/Practice.png)
+
+### Standard Learning Mode
+
+In the Standard Learning Mode, you are presented with flashcards one at a time. After reviewing the front of the card, you can reveal the back by clicking on it. Depending on your familiarity with the content, you can mark each card as "Correct" or "Wrong," which informs the spaced repetition algorithm for future sessions.
+
+![Standard Learning Mode](screenshots/Standard.png)
+
+### Flashcard Management
+
+Easily add, edit, or remove flashcards to tailor your learning experience to your personal needs or learning goals.
+
+![Flashcard Management](screenshots/Editor.png)
 
 ## Installation
 
