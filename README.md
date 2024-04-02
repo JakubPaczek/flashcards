@@ -45,7 +45,7 @@ In the Standard Learning Mode, you are presented with flashcards one at a time. 
 
 ### Flashcard Management
 
-Easily add, edit, or remove flashcards to tailor your learning experience to your personal needs or learning goals.
+Easily add or remove flashcards to tailor your learning experience to your personal needs or learning goals.
 
 ![Flashcard Management](screenshots/Editor.png)
 
