@@ -15,9 +15,11 @@ The primary goal of the Flashcards application is to help users expand and reinf
 
 ## Technologies
 
-- **C++**: For the core application logic and console interface.
+- **C++**: For the core application logic and graphical user interface (GUI).
 - **SQLite**: Utilized for storing and managing flashcards data.
-- **Qt Creator**: Recommended IDE for development and project management.
+- **Qt**: Used to create the interactive GUI for the application.
+- **CMake**: Employed for building the project, ensuring portability across different platforms.
+- **Qt Creator**: Recommended IDE for development and project management, with integrated support for Qt and CMake.
 
 ## Screenshots
 
