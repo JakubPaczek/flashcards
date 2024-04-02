@@ -87,7 +87,7 @@ FlashcardData DatabaseManager::getRandomFlashcard(const QString& language)
 
     query.prepare("SELECT ID, Front, Back FROM Flashcards "
                   "WHERE (Language LIKE :language) AND "
-                  "(Points >= 0 AND Points < 10) OR "
+                  "((Points >= 0 AND Points < 10) OR "
                   "(Points >= 10 AND Points < 20 AND LastTime < datetime('now', 'localtime', '-1 minute')) OR "
                   "(Points >= 20 AND Points < 30 AND LastTime < datetime('now', 'localtime', '-10 minutes')) OR "
                   "(Points >= 30 AND Points < 40 AND LastTime < datetime('now', 'localtime', '-30 minutes')) OR "
@@ -97,7 +97,7 @@ FlashcardData DatabaseManager::getRandomFlashcard(const QString& language)
                   "(Points >= 70 AND Points < 80 AND LastTime < datetime('now', 'localtime', '-7 days')) OR "
                   "(Points >= 80 AND Points < 90 AND LastTime < datetime('now', 'localtime', '-1 month')) OR "
                   "(Points >= 90 AND Points < 100 AND LastTime < datetime('now', 'localtime', '-3 months')) OR "
-                  "(Points = 100 AND LastTime < datetime('now', 'localtime', '-6 months')) "
+                  "(Points = 100 AND LastTime < datetime('now', 'localtime', '-6 months'))) "
                   "ORDER BY RANDOM() LIMIT 1;");
     query.bindValue(":language", queryLanguage);
 

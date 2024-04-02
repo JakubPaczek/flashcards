@@ -119,13 +119,12 @@ EditorScreen::~EditorScreen(){}
 void EditorScreen::addCard() {
     QString frontText = this->lineEdits[0]->text();
     QString backText = this->lineEdits[1]->text();
+    QString language = this->lineEdits[2]->text();
 
-    if (frontText.isEmpty() || backText.isEmpty())
+    if ((frontText.isEmpty()) || (backText.isEmpty()) || (language.isEmpty()))
     {
         return;
     }
-
-    QString language = this->lineEdits[2]->text();
 
     DatabaseManager::getInstance().addFlashcard(frontText, backText, language);
 
